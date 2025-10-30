@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -9,7 +11,7 @@ import {
   Shield
 } from 'lucide-react'
 
-const StaffAugmentation = () => {
+export default function StaffAugmentationPage() {
   const benefits = [
     {
       icon: <Zap className="w-10 h-10" />,
@@ -247,4 +249,4 @@ const StaffAugmentation = () => {
   )
 }
 
-export default StaffAugmentation
+

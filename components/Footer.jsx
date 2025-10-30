@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Linkedin, Instagram, MessageCircle } from 'lucide-react'
 
 const Footer = () => {
@@ -94,7 +94,7 @@ const Footer = () => {
             {companyLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  to={link.path}
+                  href={link.path}
                   className="font-inter font-normal text-[11px] sm:text-[14px] leading-[1.4] text-[#F5F7FA] hover:text-white transition-colors duration-300"
                 >
                   {link.name}

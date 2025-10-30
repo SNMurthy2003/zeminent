@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -9,7 +11,7 @@ import {
   Linkedin
 } from 'lucide-react'
 
-const About = () => {
+export default function AboutPage() {
   const values = [
     {
       icon: <Award className="w-12 h-12" />,
@@ -193,20 +195,17 @@ const About = () => {
         </div>
       </section>
 
-      {/* Ready to Transform Your Business Section - Exact replica from Home page */}
+      {/* Ready to Transform Your Business Section */}
       <div className="section-spacing relative w-full bg-[#09001A] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-[24px] sm:gap-[28px] lg:gap-[32px]">
-          {/* Heading */}
           <h2 className="w-full max-w-[90%] sm:max-w-[85%] lg:max-w-[887px] text-center text-white font-[700] text-[24px] sm:text-[26px] lg:text-[28px] leading-[1.3] font-inter">
             Ready to Transform Your Business?
           </h2>
 
-          {/* Subtext */}
           <p className="w-full max-w-[90%] sm:max-w-[85%] lg:max-w-[887px] text-center text-[#F5F7FA] font-[400] text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.5] font-inter">
             Let's discuss how we can help you achieve your technology goals and drive your business forward.
           </p>
 
-          {/* Button */}
           <button className="w-full max-w-[280px] sm:max-w-[240px] lg:w-[224px] h-[48px] sm:h-[50px] lg:h-[52px] bg-[#B065FF] rounded-[4px] flex items-center justify-center hover:bg-[#9a4df5] transition-all cursor-pointer">
             <span className="text-white font-[500] text-[15px] lg:text-[16px] leading-[24px] text-center font-inter">
               Start Your Project
@@ -217,5 +216,3 @@ const About = () => {
     </div>
   )
 }
-
-export default About

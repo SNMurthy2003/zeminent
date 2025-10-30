@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -7,7 +9,7 @@ import {
   TrendingUp
 } from 'lucide-react'
 
-const CloudSolutions = () => {
+export default function CloudSolutionsPage() {
   // Proven Results Metrics
   const metrics = [
     {
@@ -240,4 +242,3 @@ const CloudSolutions = () => {
   )
 }
 
-export default CloudSolutions

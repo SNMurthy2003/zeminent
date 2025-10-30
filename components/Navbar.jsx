@@ -1,12 +1,15 @@
+'use client'
+
 import React, { useState, useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
-  const location = useLocation()
+  const pathname = usePathname()
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -38,7 +41,7 @@ const Navbar = () => {
 
   // Handle same-page link clicks - scroll to top
   const handleLinkClick = (path) => {
-    if (location.pathname === path) {
+    if (pathname === path) {
       window.scrollTo({
         top: 0,
         left: 0,
@@ -88,7 +91,7 @@ const Navbar = () => {
         {/* Left Section - Logo/Brand */}
         <div className="flex items-center">
           <Link
-            to="/"
+            href="/"
             onClick={() => handleLinkClick('/')}
             className="flex items-center transition-transform duration-300 ease-out hover:scale-[1.08]"
           >
@@ -139,7 +142,7 @@ const Navbar = () => {
                       {item.submenu.map((subItem, index) => (
                         <Link
                           key={subItem.name}
-                          to={subItem.path}
+                          href={subItem.path}
                           onClick={() => {
                             handleLinkClick(subItem.path)
                             setIsServicesDropdownOpen(false)
@@ -157,7 +160,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <Link
-                  to={item.path}
+                  href={item.path}
                   onClick={() => handleLinkClick(item.path)}
                   className="font-inter font-[500] text-[14px] xl:text-[16px] leading-[24px] text-white cursor-pointer transition-all duration-[300ms] ease-out hover:text-[#B065FF] hover:scale-[1.05]"
                 >
@@ -216,7 +219,7 @@ const Navbar = () => {
                         {item.submenu.map((subItem, subIndex) => (
                           <Link
                             key={subItem.name}
-                            to={subItem.path}
+                            href={subItem.path}
                             onClick={() => {
                               handleLinkClick(subItem.path)
                               handleMobileNavigation()
@@ -234,7 +237,7 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    to={item.path}
+                    href={item.path}
                     onClick={() => {
                       handleLinkClick(item.path)
                       handleMobileNavigation()

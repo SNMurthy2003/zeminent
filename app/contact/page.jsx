@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -14,7 +16,7 @@ import {
   Sparkles
 } from 'lucide-react'
 
-const Contact = () => {
+export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState(null)
   const [formData, setFormData] = useState({
     fullName: '',
@@ -476,4 +478,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+

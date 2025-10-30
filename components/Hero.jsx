@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const Hero = () => {
@@ -78,7 +80,7 @@ const Hero = () => {
       {/* Service Boxes Section - Responsive Grid */}
       <div className="section-spacing relative w-full px-4 sm:px-6 lg:px-[6px] py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-7 place-items-center">
         {/* Box 1 - Staff Augmentation */}
-        <Link to="/staff-augmentation" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
+        <Link href="/staff-augmentation" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
           <motion.div
             custom={0}
             initial="hidden"
@@ -103,7 +105,7 @@ const Hero = () => {
         </Link>
 
         {/* Box 2 - Software Development */}
-        <Link to="/software-development" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
+        <Link href="/software-development" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
           <motion.div
             custom={1}
             initial="hidden"
@@ -128,7 +130,7 @@ const Hero = () => {
         </Link>
 
         {/* Box 3 - Cloud Solutions */}
-        <Link to="/cloud-solutions" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
+        <Link href="/cloud-solutions" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
           <motion.div
             custom={2}
             initial="hidden"
@@ -153,7 +155,7 @@ const Hero = () => {
         </Link>
 
         {/* Box 4 - DevOps Services */}
-        <Link to="/devops-services" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
+        <Link href="/devops-services" className="w-full max-w-[280px] sm:max-w-[240px] lg:max-w-[208.76px]">
           <motion.div
             custom={3}
             initial="hidden"

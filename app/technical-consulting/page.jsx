@@ -1,65 +1,90 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
-  Rocket,
-  RefreshCw,
-  Shield
+  Target,
+  Award,
+  ShieldCheck,
+  Search,
+  FileText,
+  Settings,
+  TrendingUp,
+  Code,
+  Cloud,
+  Database,
+  Lock,
+  Zap,
+  Users,
+  GitBranch,
+  Server,
+  Smartphone,
+  Layers,
+  CheckCircle
 } from 'lucide-react'
 
-const DevOpsServices = () => {
-  // Transparent Hover Boxes
-  const hoverBoxes = [
+export default function TechnicalConsultingPage() {
+  // Core Benefits
+  const coreBenefits = [
     {
-      icon: <Rocket className="w-10 h-10" />,
-      title: "Faster Deployments",
-      description: "Reduce deployment time by up to 90%"
+      icon: <Target className="w-10 h-10" />,
+      title: "Strategic Guidance",
+      description: "Expert advice aligned with your business goals"
     },
     {
-      icon: <RefreshCw className="w-10 h-10" />,
-      title: "Automated Pipelines",
-      description: "Continuous integration and delivery"
+      icon: <Award className="w-10 h-10" />,
+      title: "Industry Best Practices",
+      description: "Proven methodologies from years of experience"
     },
     {
-      icon: <Shield className="w-10 h-10" />,
-      title: "Enhanced Security",
-      description: "Security built into every stage"
+      icon: <ShieldCheck className="w-10 h-10" />,
+      title: "Risk Mitigation",
+      description: "Identify and address potential challenges early"
     }
   ]
 
-  // DevOps Transformation Process
-  const transformationProcess = [
+  // Consulting Process
+  const consultingProcess = [
     {
       number: "1",
-      title: "Current State Analysis",
-      description: "Assess your existing development and deployment processes"
+      icon: <Search className="w-10 h-10" />,
+      title: "Discovery Session",
+      description: "Deep dive into your current challenges and goals"
     },
     {
       number: "2",
-      title: "Pipeline Design",
-      description: "Design CI/CD pipelines tailored to your needs"
+      icon: <FileText className="w-10 h-10" />,
+      title: "Analysis & Assessment",
+      description: "Comprehensive evaluation of your tech stack"
     },
     {
       number: "3",
-      title: "Implementation",
-      description: "Set up automation and monitoring tools"
+      icon: <Settings className="w-10 h-10" />,
+      title: "Strategy Development",
+      description: "Create actionable roadmap and recommendations"
     },
     {
       number: "4",
-      title: "Optimization",
-      description: "Continuous improvement and optimization"
+      icon: <TrendingUp className="w-10 h-10" />,
+      title: "Implementation Support",
+      description: "Ongoing guidance during execution"
     }
   ]
 
-  // DevOps Tools
-  const tools = [
-    { name: "Docker", category: "Containerization" },
-    { name: "Kubernetes", category: "Orchestration" },
-    { name: "Jenkins", category: "CI/CD" },
-    { name: "GitLab", category: "Version Control" },
-    { name: "Terraform", category: "IaC" },
-    { name: "Ansible", category: "Configuration" },
-    { name: "Prometheus", category: "Monitoring" },
-    { name: "Grafana", category: "Visualization" }
+  // Consulting Services (12 services in 2 rows of 6)
+  const consultingServices = [
+    { icon: <Code className="w-8 h-8" />, name: "Architecture Review" },
+    { icon: <Cloud className="w-8 h-8" />, name: "Cloud Strategy" },
+    { icon: <Database className="w-8 h-8" />, name: "Data Management" },
+    { icon: <Lock className="w-8 h-8" />, name: "Security Audit" },
+    { icon: <Zap className="w-8 h-8" />, name: "Performance Optimization" },
+    { icon: <Users className="w-8 h-8" />, name: "Team Training" },
+    { icon: <GitBranch className="w-8 h-8" />, name: "DevOps Consulting" },
+    { icon: <Server className="w-8 h-8" />, name: "Infrastructure Planning" },
+    { icon: <Smartphone className="w-8 h-8" />, name: "Mobile Strategy" },
+    { icon: <Layers className="w-8 h-8" />, name: "System Integration" },
+    { icon: <CheckCircle className="w-8 h-8" />, name: "Quality Assurance" },
+    { icon: <Target className="w-8 h-8" />, name: "Digital Transformation" }
   ]
 
   return (
@@ -69,23 +94,23 @@ const DevOpsServices = () => {
         <div className="container-custom">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Streamline Your <span className="text-gradient">Development Pipeline</span>
+              Strategic <span className="text-gradient">Technology Guidance</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-              Accelerate your software delivery with automated CI/CD pipelines, infrastructure as code, and comprehensive monitoring solutions.
+              Make informed technology decisions with expert guidance. From architecture reviews to strategic planning, we help you navigate complex technical challenges.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-[20px] mt-8">
               <button className="h-[52px] bg-[#B065FF] rounded-[4px] px-[24px] py-[14px] flex items-center justify-center gap-[8px] hover:bg-[#9a4df5] transition-all cursor-pointer whitespace-nowrap">
                 <span className="text-white font-[500] text-[16px] leading-[24px] font-inter">
-                  Optimize Your Pipeline
+                  Get Started
                 </span>
                 <span className="text-white text-[16px]">➡</span>
               </button>
               <button className="w-[229px] h-[52px] bg-[#190046] rounded-[4px] px-[32px] py-[14px] flex items-center justify-center hover:bg-[#2a0066] transition-all cursor-pointer">
                 <span className="text-white font-[500] text-[16px] leading-[24px] font-inter">
-                  View Results
+                  View Success Stories
                 </span>
               </button>
             </div>
@@ -93,13 +118,13 @@ const DevOpsServices = () => {
         </div>
       </section>
 
-      {/* Transparent Hover Boxes Section */}
+      {/* Core Benefits Section - 3 Transparent Hover Boxes */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {hoverBoxes.map((box, index) => (
+            {coreBenefits.map((benefit, index) => (
               <motion.div
-                key={box.title}
+                key={benefit.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -107,13 +132,13 @@ const DevOpsServices = () => {
                 className="bg-white/5 backdrop-blur-sm border border-violet-500/10 rounded-2xl p-8 text-center transition-all duration-500 hover:bg-white/15 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-500/20"
               >
                 <div className="text-violet-400 mb-6 mx-auto w-fit transition-transform duration-300 hover:scale-110">
-                  {box.icon}
+                  {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">
-                  {box.title}
+                  {benefit.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {box.description}
+                  {benefit.description}
                 </p>
               </motion.div>
             ))}
@@ -121,7 +146,7 @@ const DevOpsServices = () => {
         </div>
       </section>
 
-      {/* DevOps Transformation Process Section */}
+      {/* Consulting Process Section - 4 Numbered Steps */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
@@ -132,15 +157,15 @@ const DevOpsServices = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-gradient">DevOps Transformation Process</span>
+              Our <span className="text-gradient">Consulting Process</span>
             </h2>
             <p className="text-xl text-gray-300">
-              From manual to automated
+              From analysis to action
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {transformationProcess.map((step, index) => (
+            {consultingProcess.map((step, index) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -166,7 +191,7 @@ const DevOpsServices = () => {
         </div>
       </section>
 
-      {/* DevOps Tools Section */}
+      {/* Consulting Services Section - 12 Services in 2 Rows of 6 */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
@@ -177,28 +202,28 @@ const DevOpsServices = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              DevOps <span className="text-gradient">Tools We Use</span>
+              Our <span className="text-gradient">Consulting Services</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Industry-leading technologies
+              Comprehensive technical expertise
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {tools.map((tool, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            {consultingServices.map((service, index) => (
               <motion.div
-                key={tool.name}
+                key={service.name}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-dark-200/50 backdrop-blur-sm border border-violet-500/20 rounded-2xl p-6 text-center card-hover flex flex-col items-center justify-center min-h-[120px]"
+                className="bg-dark-200/50 backdrop-blur-sm border border-violet-500/20 rounded-2xl p-6 text-center card-hover flex flex-col items-center justify-center min-h-[140px]"
               >
-                <div className="text-2xl font-bold text-gradient mb-2">
-                  {tool.name}
+                <div className="text-violet-400 mb-4 mx-auto w-fit transition-transform duration-300 hover:scale-110">
+                  {service.icon}
                 </div>
-                <p className="text-gray-400 text-xs">
-                  {tool.category}
+                <p className="text-white text-sm font-medium">
+                  {service.name}
                 </p>
               </motion.div>
             ))}
@@ -210,16 +235,16 @@ const DevOpsServices = () => {
       <div className="section-spacing relative w-full bg-[#000000] py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-[24px] sm:gap-[28px] lg:gap-[32px]">
           <h2 className="w-full max-w-[90%] sm:max-w-[85%] lg:max-w-[887px] text-center text-white font-[700] text-[24px] sm:text-[26px] lg:text-[28px] leading-[1.3] font-inter">
-            Ready to Accelerate Your Development?
+            Need Strategic Technical Guidance?
           </h2>
 
           <p className="w-full max-w-[90%] sm:max-w-[85%] lg:max-w-[887px] text-center text-[#F5F7FA] font-[400] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1.6] font-inter">
-            Let's implement DevOps practices that will transform your development workflow and accelerate your time to market.
+            Let's discuss your technical challenges and create a strategic roadmap for your technology investments.
           </p>
 
           <button className="w-full max-w-[280px] sm:max-w-[260px] lg:w-[300px] h-[48px] sm:h-[50px] lg:h-[52px] bg-[#B065FF] rounded-[4px] flex items-center justify-center gap-[8px] hover:bg-[#9a4df5] transition-all cursor-pointer">
             <span className="text-white font-[500] text-[15px] lg:text-[16px] leading-[24px] text-center font-inter">
-              Start Your Staffing Journey
+              Schedule a Consultation
             </span>
             <span className="text-white text-[16px]">➡</span>
           </button>
@@ -229,4 +254,3 @@ const DevOpsServices = () => {
   )
 }
 
-export default DevOpsServices

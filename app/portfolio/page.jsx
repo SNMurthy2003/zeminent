@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -17,7 +19,7 @@ import {
   Sparkles
 } from 'lucide-react'
 
-const Portfolio = () => {
+export default function PortfolioPage() {
   const industries = [
     { icon: <DollarSign className="w-10 h-10" />, title: "FinTech", description: "Secure financial solutions" },
     { icon: <Truck className="w-10 h-10" />, title: "Logistics", description: "Supply chain optimization" },
@@ -113,4 +115,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+

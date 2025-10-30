@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -9,7 +11,7 @@ import {
   FileCode
 } from 'lucide-react'
 
-const SoftwareDevelopment = () => {
+export default function SoftwareDevelopmentPage() {
   const process = [
     {
       number: "1",
@@ -262,4 +264,3 @@ const SoftwareDevelopment = () => {
   )
 }
 
-export default SoftwareDevelopment
